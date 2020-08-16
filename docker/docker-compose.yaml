@@ -7,6 +7,8 @@ services:
       - database.env # configure postgres
     volumes:
       - /custom/mount:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
 networks:
   app-network:
     driver: bridge
