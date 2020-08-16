@@ -1,0 +1,14 @@
+# docker-compose.yml
+version: '3.8'
+services:
+  database:
+    image: "postgres:12.4" # use latest official postgres version
+    env_file:
+      - database.env # configure postgres
+    volumes:
+      - /custom/mount:/var/lib/postgresql/data
+networks:
+  app-network:
+    driver: bridge
+volumes:
+  database-data: # named volumes can be managed easier using docker-compose
