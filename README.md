@@ -19,7 +19,7 @@ Local setup
 Amazon before deploy
 ====================
 
-* Create an Amazon RDS and set a private security group where you open the port 5432 from the default vpc and your machine
+* Create an Amazon RDS and set a private security group where you open the port 5432 from the vpc where the EBS belongs and also your machine
 * Test the connection agains the RDS from your machine and a Sql Client .
 * Create the database inside the remote instance .
 
