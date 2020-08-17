@@ -16,6 +16,13 @@ Local setup
 * Run the app with ```mvn spring-boot:run```
 * Execute : ```curl localhost:5000/api/v1/people```
 
+Amazon before deploy
+====================
+
+* Create an Amazon RDS and set a private security group where you open the port 5432 from the default vpc and your machine
+* Test the connection agains the RDS from your machine and a Sql Client .
+* Create the database inside the remote instance .
+
 Amazon EBS deploy
 =================
 
