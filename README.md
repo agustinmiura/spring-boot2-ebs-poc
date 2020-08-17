@@ -15,3 +15,15 @@ Local setup
 * Create the database tables.
 * Run the app with ```mvn spring-boot:run```
 * Execute : ```curl localhost:5000/api/v1/people```
+
+Amazon EBS deploy
+=================
+
+* Create an instance of Postgresql in Amazon and open the ports to allow connections .
+* Take notes of the user, password and url.
+* Deploy the app in EBS and see how it fails .
+* Set the following variables in the EBS application :
+  * SERVER_PORT : 5000
+  * SPRING_DATASOURCE_PASSWORD:$dataBasePassword
+  * SPRING_DATASOURCE_URL:jdbc:postgresql://$dataBaseUrl:$dataBasePort/$databaseName
+  * SPRING_DATASOURCE_USERNAME:$usernameDb
